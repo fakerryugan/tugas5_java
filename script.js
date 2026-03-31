@@ -14,7 +14,7 @@ const eventHandler={
 //**menambahkan protduk dengan spread operator */
 function tambahProduk(id,nama,harga){
     const produkBaru = {id,nama,harga};
-    produklist = [produklist,produkBaru];
+    produklist = [...produklist,produkBaru];
     eventHandler.tambah(nama);
 }
 //**mengahpus produk dengan rest parameter */
