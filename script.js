@@ -18,7 +18,10 @@ function tambahProduk(id,nama,harga){
     eventHandler.tambah(nama);
 }
 //**mengahpus produk dengan rest parameter */
-function hapusProduk(id){}
+function hapusProduk(...id){
+    produklist = produklist.filter(produk => !id.includes(produk.id));
+    eventHandler.hapus(id);
+}
 //**menampilkan produk dengan desttructuring */
 function tampilkanProduk(){console.log("\n=== DAFTAR SEMUA PRODUK ===");
     produklist.forEach(produk => {
