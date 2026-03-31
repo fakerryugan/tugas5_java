@@ -20,7 +20,12 @@ function tambahProduk(id,nama,harga){
 //**mengahpus produk dengan rest parameter */
 function hapusProduk(id){}
 //**menampilkan produk dengan desttructuring */
-function tampilkanProduk(){}
+function tampilkanProduk(){console.log("\n=== DAFTAR SEMUA PRODUK ===");
+    produklist.forEach(produk => {
+        const { id, nama, harga } = produk; 
+        console.log(`ID: ${id} | Nama: ${nama} | Harga: Rp${harga}`);
+    });
+}
 
 tampilkanProduk();
 tambahProduk(6,'cpower',5000);
